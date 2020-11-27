@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
             reference = FirebaseDatabase.getInstance().getReference().child("Users");
         }
 
-
     }
 
     public void LoginUser(View v) {
