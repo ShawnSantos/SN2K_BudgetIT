@@ -8,7 +8,7 @@
     android:paddingStart="35dp"
     android:paddingEnd="35dp"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
