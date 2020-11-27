@@ -4,14 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -39,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser() != null) {
-            Intent i = new Intent(MainActivity.this, Dashboard.class);
+            Intent i = new Intent(MainActivity.this, Home.class);
             startActivity(i);
         } else {
             setContentView(R.layout.activity_main);
@@ -66,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     progressBar.setVisibility(View.GONE);
                                     Toast.makeText(getApplicationContext(), "Logged in", Toast.LENGTH_SHORT).show();
-                                    Intent i = new Intent(MainActivity.this, Dashboard.class);
+                                    Intent i = new Intent(MainActivity.this, Home.class);
                                     startActivity(i);
                                 } else {
                                     Toast.makeText(getApplicationContext(), "Invalid email or password. Try again.", Toast.LENGTH_SHORT).show();
