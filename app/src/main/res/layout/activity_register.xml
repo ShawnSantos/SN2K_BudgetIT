@@ -20,7 +20,7 @@
             android:padding="15dp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true">
-            
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp">
             </View>
-            
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
                 android:layout_marginRight="-4dp"
                 android:maxLength="50"
                 android:maxLines="1"
-                android:id="@+id/email_edit_login"
+                android:id="@+id/email_edit_register"
                 android:singleLine="true"
                 android:textColor="@color/blue_grey_300">
 
@@ -76,13 +76,13 @@
                 android:layout_marginRight="-4dp"
                 android:maxLength="50"
                 android:maxLines="1"
-                android:id="@+id/password_edit_login"
+                android:id="@+id/password_edit_register"
                 android:singleLine="true"
                 android:textColor="@color/blue_grey_300"
                 android:inputType="textPassword">
 
             </com.google.android.material.textfield.TextInputEditText>
-            
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="10dp">
@@ -91,14 +91,30 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginTop="5dp"
-                android:onClick="forgotPassword"
-                android:text="Forgot Password?"
-                android:textColor="@color/blue_grey_400"
-                android:textStyle="bold">
+                android:text="Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/blue_grey_500"
+                android:textStyle="bold"
+                />
 
-            </TextView>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:id="@+id/name_edit_register"
+                android:singleLine="true"
+                android:textColor="@color/blue_grey_300"
+                android:inputType="text">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp">
+            </View>
 
             <View
                 android:layout_width="match_parent"
@@ -110,13 +126,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="-4dp"
                 android:layout_marginRight="-4dp"
+                android:onClick="RegisterUser"
                 android:textAllCaps="false"
-                android:onClick="LoginUser"
                 android:backgroundTint="@color/green_400"
                 android:textColor="@color/blue_grey_900"
-                android:text="Login">
+                android:text="Register">
 
-                <!--android:background=""-->
 
             </Button>
 
@@ -136,15 +151,15 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="New User? "
+                    android:text="Already have an Account? "
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                     android:textColor="@color/blue_grey_300"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Create an Account."
-                    android:onClick="gotoRegister"
+                    android:text="Login."
+                    android:onClick="gotoLogin"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                     android:textColor="@color/green_300"
                     android:textStyle="bold"/>
@@ -160,7 +175,7 @@
             android:indeterminate="true"
             android:indeterminateTint="@color/green_400"
             android:visibility="gone"
-            android:id="@+id/progressBarLogin"/>
+            android:id="@+id/progressBarRegister"/>
 
     </RelativeLayout>
 </LinearLayout>
