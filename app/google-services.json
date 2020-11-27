@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "25545936132",
+    "firebase_url": "https://sn2k-budget-it.firebaseio.com",
+    "project_id": "sn2k-budget-it",
+    "storage_bucket": "sn2k-budget-it.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25545936132:android:e72fe7d45c348cabca5451",
+        "android_client_info": {
+          "package_name": "com.snkk.budgetit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25545936132-ds6hdeosfv1ooq7s83sos5lm7pckmd5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKcQuuWTOiR2gmvf1LPFNYekDUl575bPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25545936132-ds6hdeosfv1ooq7s83sos5lm7pckmd5c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
