@@ -11,4 +11,17 @@
     <color name="blue_grey_300">#90A4AE</color>
     <color name="blue_grey_400">#78909C</color>
 
+    <color name="white_bg">#FAFAFA</color>
+    <color name="white_main">#FFFFFF</color>
+
+    <color name="light_bluesky">#56CCF2</color>
+    <color name="dark_bluesky">#2F80ED</color>
+
+    <color name="dark_passion">#e53935</color>
+    <color name="light_passion">#e35d5b</color>
+
+    <color name="dark_littleleaf">#76b852</color>
+    <color name="light_littleleaf">#8DC26F</color>
+
+
 </resources>
