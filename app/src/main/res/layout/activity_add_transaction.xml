@@ -77,6 +77,7 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textStyle="bold" />
                 <TextView
+                    android:onClick="openDialog"
                     android:id="@+id/textView_amount"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
