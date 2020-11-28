@@ -2,6 +2,7 @@ package com.snkk.budgetit;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,53 +12,46 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
 
-    private BottomNavigationView bottomNavigationView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        //Initialize and assign variable
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNav);
-
-        //Set Home Selected
-        bottomNavigationView.setSelectedItemId(R.id.home);
-
-        //Perform ItemSelectedListener
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.dashboard:
-                        startActivity(new Intent(getApplicationContext(), Dashboard.class));
-                        overridePendingTransition(0,0);
-                        return true;
-                    case R.id.home:
-                        return true;
-
-                    case R.id.stats:
-                        startActivity(new Intent(getApplicationContext(), Statistics.class));
-                        return true;
-
-                    case R.id.add_trans:
-                        startActivity(new Intent(getApplicationContext(), AddTransaction.class));
-                        return true;
-
-                    case R.id.categories:
-                        startActivity(new Intent(getApplicationContext(), Categories.class));
-                        return true;
-
-                    case R.id.forum:
-                        startActivity(new Intent(getApplicationContext(), Forum.class));
-                        return true;
-
-
-                }
-                return false;
-            }
-        });
-
+      BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNav);
+      bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    Fragment selectedFragment = null;
+
+                    switch (item.getItemId()){
+                        case R.id.dashboard:
+                            selectedFragment = new Dashboard();
+                            break;
+
+                        case R.id.stats:
+                            selectedFragment = new Statistics();
+                            break;
+
+                        case R.id.add_trans:
+                            selectedFragment = new AddTransaction();
+                            break;
+
+                        case R.id.categories:
+                            selectedFragment = new Categories();
+                            break;
+
+                        case R.id.forum:
+                            selectedFragment = new Forum();
+                            break;
+                    }
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
+
+                    return true;
+                }
+            };
 
 }

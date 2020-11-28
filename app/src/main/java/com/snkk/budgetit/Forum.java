@@ -1,60 +1,21 @@
 package com.snkk.budgetit;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Forum extends AppCompatActivity {
+public class Forum extends Fragment {
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forum);
-
-        //Initialize and assign variable
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNav);
-
-        //Set Home Selected
-        bottomNavigationView.setSelectedItemId(R.id.forum);
-
-        //Perform ItemSelectedListener
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.dashboard:
-                        startActivity(new Intent(getApplicationContext(), Dashboard.class));
-                        return true;
-
-                    case R.id.home:
-                        startActivity(new Intent(getApplicationContext(), Home.class));
-                        overridePendingTransition(0,0);
-                        return true;
-
-                    case R.id.stats:
-                        startActivity(new Intent(getApplicationContext(), Statistics.class));
-                        return true;
-
-                    case R.id.add_trans:
-                        startActivity(new Intent(getApplicationContext(), AddTransaction.class));
-                        return true;
-
-                    case R.id.categories:
-                        startActivity(new Intent(getApplicationContext(), Categories.class));
-                        return true;
-
-                    case R.id.forum:
-                        return true;
-
-
-                }
-                return false;
-            }
-        });
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.activity_forum,container,false);
     }
 }
