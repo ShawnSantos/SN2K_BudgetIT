@@ -76,8 +76,8 @@
                     android:text="php"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textStyle="bold" />
+
                 <TextView
-                    android:onClick="openDialog"
                     android:id="@+id/textView_amount"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -136,6 +136,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"></View>
             <Button
+                android:id="@+id/note"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Note"
@@ -156,6 +157,7 @@
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/paymentType"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Payment Type"
@@ -166,6 +168,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"></View>
             <Button
+                android:id="@+id/status"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Status"
@@ -176,6 +179,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"></View>
             <Button
+                android:id="@+id/attachPhoto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Attach Photo"
