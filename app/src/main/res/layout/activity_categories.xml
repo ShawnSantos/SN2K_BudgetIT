@@ -1,18 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Categories">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".category">
+
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Categories"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"/>
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/general"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:text="GENERAL"
+        app:layout_constraintStart_toStartOf="@id/general"
+        app:layout_constraintEnd_toEndOf="@id/general"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        />
+
+    <Button
+        android:id="@+id/food"
+        android:text="FOOD AND DRINKS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/general"
+        app:layout_constraintStart_toStartOf="@id/general"
+        app:layout_constraintTop_toBottomOf="@id/general" />
+
+    <Button
+        android:id="@+id/lifeentertain"
+        android:text="LIFE AND ENTERTAINMENT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/food"
+        app:layout_constraintStart_toStartOf="@id/food"
+        app:layout_constraintTop_toBottomOf="@id/food" />
+
+    <Button
+        android:id="@+id/housing"
+        android:text="HOUSING"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/lifeentertain"
+        app:layout_constraintStart_toStartOf="@id/lifeentertain"
+        app:layout_constraintTop_toBottomOf="@id/lifeentertain" />
 
 
-</RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
