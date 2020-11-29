@@ -17,7 +17,8 @@ public class LifeEntertainment extends AppCompatActivity {
     }
 
     public void BackButton (View v){
-        Intent i = new Intent(LifeEntertainment.this, category.class);
-        startActivity(i);
+        /*Intent i = new Intent(LifeEntertainment.this, category.class);
+        startActivity(i);*/
+        finish();
     }
 }

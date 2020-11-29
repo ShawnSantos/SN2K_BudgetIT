@@ -17,7 +17,8 @@ public class General extends AppCompatActivity {
     }
 
     public void BackButton (View v){
-        Intent i = new Intent(General.this, category.class);
-        startActivity(i);
+        /*Intent i = new Intent(General.this, category.class);
+        startActivity(i);*/
+        finish();
     }
 }

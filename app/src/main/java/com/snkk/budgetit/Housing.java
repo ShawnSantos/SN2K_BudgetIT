@@ -17,7 +17,8 @@ public class Housing extends AppCompatActivity {
     }
 
     public void BackButton (View v){
-        Intent i = new Intent(Housing.this, category.class);
-        startActivity(i);
+        /*Intent i = new Intent(Housing.this, category.class);
+        startActivity(i);*/
+        finish();
     }
 }

@@ -18,7 +18,8 @@ public class FoodNDrinks extends AppCompatActivity {
     }
 
     public void BackButton (View v){
-        Intent i = new Intent(FoodNDrinks.this, category.class);
-        startActivity(i);
+        /*Intent i = new Intent(FoodNDrinks.this, category.class);
+        startActivity(i);*/
+        finish();
     }
 }
